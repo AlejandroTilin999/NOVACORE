@@ -1,702 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>NOVACORE</title>
-		<link rel="stylesheet" href="styles.css" />
-		<link rel="icon" type="image/png" href="img/LOGOO.ICO">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	</head>
-	<body>
-		    <!-- BARRA DE ACCESIBILIDAD -->
-			<div class="accessibility-bar">
-				<div class="accessibility-container">
-					<button id="darkModeToggle" class="accessibility-btn" title="Modo Oscuro/Claro">
-						<i class="fa-solid fa-moon"></i>
-						<span>Modo Oscuro</span>
-					</button>
-					
-					<button id="textReader" class="accessibility-btn" title="Lector de Texto">
-						<i class="fa-solid fa-volume-up"></i>
-						<span>Lector</span>
-					</button>
-					
-					<button id="increaseText" class="accessibility-btn" title="Aumentar Texto">
-						<i class="fa-solid fa-text-height"></i>
-						<span>A+</span>
-					</button>
-					
-					<button id="decreaseText" class="accessibility-btn" title="Disminuir Texto">
-						<i class="fa-solid fa-text-height"></i>
-						<span>A-</span>
-					</button>
-					
-					<button id="highContrast" class="accessibility-btn" title="Alto Contraste">
-						<i class="fa-solid fa-circle-half-stroke"></i>
-						<span>Contraste</span>
-					</button>
-				</div>
-			</div>
-		<header>
-			<div class="container-hero">
-				<div class="container hero">
-					<div class="customer-support">
-						<i class="fa-solid fa-headset"></i>
-						<div class="content-customer-support">
-							<span class="text">Soporte al cliente</span>
-							<span class="number">447-172-7267</span>
-						</div>
-					</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login NOVACORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="icon" type="image/png" href="Logosolo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
 
-					<div class="container-logo">
-						<img src="img/copia sin fonod.png" alt="GameZone Logo" class="logo-img">
-						<h1 class="logo"><a href="/">NOVACORE</a></h1>
-					</div>
+<body>
+    <div class="contenedor contenedor-formulario">
+        <div class="imagen-formulario"></div>
 
-					<div class="container-user">
-						<i class="fa-solid fa-user"></i>
-						<i class="fa-solid fa-basket-shopping"></i>
-						<div class="content-shopping-cart">
-							<span class="text">Carrito</span>
-							<span class="number">(0)</span>
-						</div>
-					</div>
-				</div>
-			</div>
+        <form class="formulario" id="formLogin">
 
-			<div class="container-navbar">
-				<nav class="navbar container">
-					<i class="fa-solid fa-bars"></i>
-					<ul class="menu">
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">PlayStation</a></li>
-						<li><a href="#">Xbox</a></li>
-						<li><a href="#">Nintendo</a></li>
-						<li><a href="#">PC Gaming</a></li>
-						<li><a href="#">Accesorios</a></li>
-						<li><a href="#">Blog</a></li>
-					</ul>
+            <div class="texto-formulario">
+                <h2>Bienvenido NOVACORE</h2>
+                <p>Inicia sesión con tu correo</p>
+            </div>
 
-					<form class="search-form">
-						<input type="search" placeholder="Buscar juegos..." />
-						<button class="btn-search">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</button>
-					</form>
-				</nav>
-			</div>
-		</header>
+            <div class="input">
+                <label for="correo">Correo electrónico</label>
+                <input placeholder="Ingresa tu Gmail" type="email" id="correo">
+            </div>
 
-		<section class="banner">
-			<div class="content-banner">
-				<p>Los mejores videojuegos</p>
-				<h2>Explora Mundos <br />Increíbles</h2>
-				<a href="#">Comprar ahora</a>
-			</div>
-		</section>
+            <div class="input">
+                <label for="contraseña">Contraseña</label>
+                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+            </div>
 
-		<main class="main-content">
-			<section class="container container-features">
-				<div class="card-feature">
-					<i class="fa-solid fa-truck-fast"></i>
-					<div class="feature-content">
-						<span>Envío gratuito</span>
-						<p>En pedidos superiores a $100</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-rotate-left"></i>
-					<div class="feature-content">
-						<span>Devoluciones</span>
-						<p>30 días para devolver tu compra</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-gift"></i>
-					<div class="feature-content">
-						<span>Tarjetas regalo</span>
-						<p>Regala gaming a tus amigos</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-headset"></i>
-					<div class="feature-content">
-						<span>Soporte 24/7</span>
-						<p>LLámanos al 123-456-7890</p>
-					</div>
-				</div>
-			</section>
+            <div class="input">
+                <button type="button" class="boton-login" id="btnLogin">
+                    Login
+                </button>
+            </div>
 
-			<section class="container top-categories">
-				<h1 class="heading-1">Categorías Populares</h1>
-				<div class="container-categories">
-					<div class="card-category category-ps5">
-						<p>PlayStation 5</p>
-						<span>Ver más</span>
-					</div>
-					<div class="card-category category-xbox">
-						<p>Xbox Series X</p>
-						<span>Ver más</span>
-					</div>
-					<div class="card-category category-nintendo">
-						<p>Nintendo Switch</p>
-						<span>Ver más</span>
-					</div>
-				</div>
-			</section>
+            <p style="text-align:center; color: var(--blanco); margin-top: 20px;">
+                ¿No tienes cuenta? 
+                <a href="Registro.html" style="color: var(--blanco); text-decoration: underline;">Regístrate</a>
+            </p>
+        </form>
+    </div>
 
-			<section class="container top-products">
-				<h1 class="heading-1">Juegos Destacados</h1>
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } 
+            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-				<div class="container-options">
-					<span class="active">Más vendidos</span>
-					<span>Novedades</span>
-					<span>Próximos lanzamientos</span>
-				</div>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBSpS6l1NLfeG0mGPADlBWT7cM4zr8eJqo",
+            authDomain: "novacore-a1ced.firebaseapp.com",
+            projectId: "novacore-a1ced",
+            storageBucket: "novacore-a1ced.firebasestorage.app",
+            messagingSenderId: "592320213272",
+            appId: "1:592320213272:web:692d7299a95c7554422e6d"
+        };
 
-				<div class="container-products">
-					<!-- Juego 1 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img src="img/Elden.png" alt="Elden Ring" />
-							<span class="discount">-15%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-							</div>
-							<h3>Elden Ring</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$490.00 <span>$590.00</span></p>
-						</div>
-					</div>
-					<!-- Juego 2 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img
-								src="img/God.png"
-								alt="God of War Ragnarok"
-							/>
-							<span class="discount">-20%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-							</div>
-							<h3>God of War Ragnarok</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$650.00 <span>$700.00</span></p>
-						</div>
-					</div>
-					<!-- Juego 3 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img
-								src="img/Cuphead.png"
-								alt="CUPHEAD"
-							/>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-							</div>
-							<h3>Cuphead</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$250.00</p>
-						</div>
-					</div>
-					<!-- Juego 4 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img src="img/Haloo.png" alt="Halo Infinite" />
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-							</div>
-							<h3>Halo Infinite</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$499.99</p>
-						</div>
-					</div>
-				</div>
-			</section>
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
 
-			<section class="gallery">
-				<img
-					src="img/up2.jpg"
-					alt="Gaming Setup 1"
-					class="gallery-img-1"
-				/><img
-					src="img/set22.png"
-					alt="Gaming Setup 2"
-					class="gallery-img-2"
-				/><img
-					src="img/yo.jpg"
-					alt="Gaming Setup 3"
-					class="gallery-img-3"
-				/><img
-					src="img/Yop.jpg"
-					alt="Gaming Setup 4"
-					class="gallery-img-4"
-				/><img
-					src="img/sett.png"
-					alt="Gaming Setup 5"
-					class="gallery-img-5"
-				/>
-			</section>
+        document.getElementById("btnLogin").addEventListener("click", async () => {
+            const correo = document.getElementById("correo").value.trim();
+            const contraseña = document.getElementById("contraseña").value.trim();
 
-			<section class="container specials">
-				<h1 class="heading-1">Artículos Especiales</h1>
+            if (!correo || !contraseña) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
 
-				<div class="container-options">
-					<span class="active">Más vendidos</span>
-					<span>Novedades</span>
-					<span>Próximos lanzamientos</span>
-				</div>
-<!-- Copie y pegue otro pero tengo que poner la funcionalidad de ir al carrito -->
-				<div class="container-products">
-					<!-- Producto 1 -->
-					<div class="card-product">
+            try {
+                await signInWithEmailAndPassword(auth, correo, contraseña);
+                alert("Inicio de sesión exitoso.");
+                window.location.href = "home.html";
 
-						<div class="container-img">
-							<img src="img/xboxx.png" alt="Xbox Series X" />
-							<span class="discount">-10%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-							</div>
-							<h3>Xbox Series X</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$449.99 <span>$499.99</span></p>
-						</div>
-					</div>
-					<!-- Producto 2 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img
-								src="img/SillaGamer.png"
-								alt="Silla Gamer Profesional"
-							/>
-							<span class="discount">-25%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star-half-stroke"></i>
-							</div>
-							<h3>Silla Gamer Pro</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$199.99 <span>$249.99</span></p>
-						</div>
-					</div>
-					<!-- Producto 3 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img src="img/PC_Gamer.png" alt="PC Gaming" />
-							<span class="discount">-15%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-regular fa-star"></i>
-							</div>
-							<h3>PC Gaming Ryzen 7</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$1,199.99 <span>$1,399.99</span></p>
-						</div>
-					</div>
-					<!-- Producto 4 -->
-					<div class="card-product">
-						<div class="container-img">
-							<img src="img/audifonos.png" alt="Auriculares Gaming" />
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-card-product">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star-half-stroke"></i>
-							</div>
-							<h3>Auriculares 7.1</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
-							</span>
-							<p class="price">$89.99</p>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			<section class="container blogs">
-				<h1 class="heading-1">Últimas Noticias Gaming</h1>
-
-				<div class="container-blogs">
-					<div class="card-blog">
-						<div class="container-img">
-							<img src="img/Mejores.png" alt="Noticia Gaming 1" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-blog">
-							<h3>Los mejores juegos del 2023</h3>
-							<span>15 Diciembre 2023</span>
-							<p>
-								Repasamos los títulos más destacados del año que está por terminar, desde aventuras épicas hasta innovadoras experiencias indie que han marcado tendencia en la industria.
-							</p>
-							<div class="btn-read-more">Leer más</div>
-						</div>
-					</div>
-					<div class="card-blog">
-						<div class="container-img">
-							<img src="img/Nintendo.png" alt="Noticia Gaming 2" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-blog">
-							<h3>Nuevas consolas en camino</h3>
-							<span>10 Diciembre 2023</span>
-							<p>
-								Analizamos los rumores y confirmaciones sobre las próximas generaciones de consolas y qué podemos esperar de los principales fabricantes en los próximos años.
-							</p>
-							<div class="btn-read-more">Leer más</div>
-						</div>
-					</div>
-					<div class="card-blog">
-						<div class="container-img">
-							<img src="img/Targetas_regalo.png" alt="Noticia Gaming 3" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-blog">
-							<h3>Guía de regalos para gamers</h3>
-							<span>5 Diciembre 2023</span>
-							<p>
-								Encuentra el regalo perfecto para los amantes de los videojuegos. Desde periféricos hasta suscripciones y los últimos lanzamientos, tenemos recomendaciones para todos los presupuestos.
-							</p>
-							<div class="btn-read-more">Leer más</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-
-		<footer class="footer">
-			<div class="container container-footer">
-				<div class="menu-footer">
-					<div class="contact-info">
-						<p class="title-footer">Información de Contacto</p>
-						<ul>
-							<li>
-								Dirección: Avenida Tecnológica 456, Ciudad Innovación, MX 56789
-							</li>
-							<li>Teléfono: 447-172-7267</li>
-							<li>Email: NovacoreOficial@gmail.com</li>
-							<li>Horario: Lunes a Sábado 9:00 - 20:00</li>
-						</ul>
-						<div class="social-icons">
-							<span class="facebook">
-								<i class="fa-brands fa-facebook-f"></i>
-							</span>
-							<span class="twitter">
-								<i class="fa-brands fa-twitter"></i>
-							</span>
-							<span class="youtube">
-								<i class="fa-brands fa-youtube"></i>
-							</span>
-							<span class="twitch">
-								<i class="fa-brands fa-twitch"></i>
-							</span>
-							<span class="instagram">
-								<i class="fa-brands fa-instagram"></i>
-							</span>
-						</div>
-					</div>
-		
-					<div class="information">
-						<p class="title-footer">Información</p>
-						<ul>
-							<li><a href="#">Acerca de NOVACORE</a></li>
-							<li><a href="#">Métodos de envío</a></li>
-							<li><a href="#">Políticas de privacidad</a></li>
-							<li><a href="#">Términos y condiciones</a></li>
-							<li><a href="#">Contáctanos</a></li>
-						</ul>
-					</div>
-		
-					<div class="my-account">
-						<p class="title-footer">Mi cuenta</p>
-						<ul>
-							<li><a href="#">Mi cuenta</a></li>
-							<li><a href="#">Historial de compras</a></li>
-							<li><a href="#">Lista de deseos</a></li>
-							<li><a href="#">Suscripciones</a></li>
-							<li><a href="#">Reembolsos</a></li>
-						</ul>
-					</div>
-		
-					<div class="newsletter">
-						<p class="title-footer">Boletín informativo</p>
-						<div class="content">
-							<p>
-								Suscríbete al boletín de NOVACORE para recibir las últimas novedades tecnológicas, lanzamientos y promociones exclusivas.
-							</p>
-							<input type="email" placeholder="Ingresa tu correo aquí...">
-							<button>Suscríbete</button>
-						</div>
-					</div>
-				</div>
-		
-				<div class="copyright">
-					<p>
-						N O V A C O R E &copy; 2025 — Tu tienda de tecnología y gaming
-					</p>
-					<img src="img/payment.png" alt="Métodos de pago">
-				</div>
-			</div>
-		</footer>		
-		<script>
-			// Funcionalidades de accesibilidad
-			document.addEventListener('DOMContentLoaded', function() {
-				// Modo Oscuro/Claro
-				const darkModeToggle = document.getElementById('darkModeToggle');
-				const darkModeIcon = darkModeToggle.querySelector('i');
-				const darkModeText = darkModeToggle.querySelector('span');
-				
-				darkModeToggle.addEventListener('click', function() {
-					document.body.classList.toggle('dark-mode');
-					
-					if (document.body.classList.contains('dark-mode')) {
-						darkModeIcon.className = 'fa-solid fa-sun';
-						darkModeText.textContent = 'Modo Claro';
-					} else {
-						darkModeIcon.className = 'fa-solid fa-moon';
-						darkModeText.textContent = 'Modo Oscuro';
-					}
-				});
-		
-				// Lector de Texto
-				const textReader = document.getElementById('textReader');
-				let isReading = false;
-				let speech = null;
-				
-				textReader.addEventListener('click', function() {
-					if (!('speechSynthesis' in window)) {
-						alert('Tu navegador no soporta la función de lectura de texto');
-						return;
-					}
-					
-					if (isReading) {
-						speechSynthesis.cancel();
-						isReading = false;
-						textReader.innerHTML = '<i class="fa-solid fa-volume-up"></i><span>Lector</span>';
-					} else {
-						const mainText = document.querySelector('main').innerText;
-						speech = new SpeechSynthesisUtterance(mainText);
-						speech.lang = 'es-ES';
-						speech.rate = 1;
-						speech.pitch = 1;
-						speech.volume = 1;
-						
-						speech.onend = function() {
-							isReading = false;
-							textReader.innerHTML = '<i class="fa-solid fa-volume-up"></i><span>Lector</span>';
-						};
-						
-						speechSynthesis.speak(speech);
-						isReading = true;
-						textReader.innerHTML = '<i class="fa-solid fa-stop"></i><span>Detener</span>';
-					}
-				});
-		
-				// Aumentar Texto
-				const increaseText = document.getElementById('increaseText');
-				const decreaseText = document.getElementById('decreaseText');
-				let textSize = 0;
-				
-				increaseText.addEventListener('click', function() {
-					if (textSize < 2) {
-						textSize++;
-						document.documentElement.classList.remove('large-text', 'larger-text');
-						if (textSize === 1) document.documentElement.classList.add('large-text');
-						if (textSize === 2) document.documentElement.classList.add('larger-text');
-					}
-				});
-				
-				decreaseText.addEventListener('click', function() {
-					if (textSize > 0) {
-						textSize--;
-						document.documentElement.classList.remove('large-text', 'larger-text');
-						if (textSize === 1) document.documentElement.classList.add('large-text');
-					}
-				});
-		
-				// Alto Contraste
-				const highContrast = document.getElementById('highContrast');
-				
-				highContrast.addEventListener('click', function() {
-					document.body.classList.toggle('high-contrast');
-					
-					if (document.body.classList.contains('high-contrast')) {
-						highContrast.innerHTML = '<i class="fa-solid fa-palette"></i><span>Normal</span>';
-					} else {
-						highContrast.innerHTML = '<i class="fa-solid fa-circle-half-stroke"></i><span>Contraste</span>';
-					}
-				});
-			});
-		</script>
-	</body>
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+    </script>
+</body>
 </html>
