@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login NOVACORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="icon" type="image/png" href="Logosolo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+    <div class="contenedor contenedor-formulario">
+        <div class="imagen-formulario"></div>
+
+        <form class="formulario" id="formLogin">
+
+            <div class="texto-formulario">
+                <h2>Bienvenido NOVACORE</h2>
+                <p>Inicia sesión con tu correo</p>
+            </div>
+
+            <div class="input">
+                <label for="correo">Correo electrónico</label>
+                <input placeholder="Ingresa tu Gmail" type="email" id="correo">
+            </div>
+
+            <div class="input">
+                <label for="contraseña">Contraseña</label>
+                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+            </div>
+
+            <div class="input">
+                <button type="button" class="boton-login" id="btnLogin">
+                    Login
+                </button>
+            </div>
+
+            <p style="text-align:center; color: var(--blanco); margin-top: 20px;">
+                ¿No tienes cuenta? 
+                <a href="Registro.html" style="color: var(--blanco); text-decoration: underline;">Regístrate</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } 
+            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBSpS6l1NLfeG0mGPADlBWT7cM4zr8eJqo",
+            authDomain: "novacore-a1ced.firebaseapp.com",
+            projectId: "novacore-a1ced",
+            storageBucket: "novacore-a1ced.firebasestorage.app",
+            messagingSenderId: "592320213272",
+            appId: "1:592320213272:web:692d7299a95c7554422e6d"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("btnLogin").addEventListener("click", async () => {
+            const correo = document.getElementById("correo").value.trim();
+            const contraseña = document.getElementById("contraseña").value.trim();
+
+            if (!correo || !contraseña) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
+
+            try {
+                await signInWithEmailAndPassword(auth, correo, contraseña);
+                alert("Inicio de sesión exitoso.");
+                window.location.href = "index.html";
+
+
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

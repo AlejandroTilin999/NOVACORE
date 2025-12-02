@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro NOVACORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="icon" type="image/png" href="Logosolo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+    <div class="contenedor contenedor-formulario">
+        <div class="imagen-formulario"></div>
+
+        <form class="formulario" id="formRegistro">
+
+            <div class="texto-formulario">
+                <h2>Registro NOVACORE</h2>
+                <p>Crea tu cuenta para empezar</p>
+            </div>
+
+            <div class="input">
+                <label for="correo">Correo electrónico</label>
+                <input placeholder="Ingresa tu Gmail" type="email" id="correo">
+            </div>
+
+            <div class="input">
+                <label for="contraseña">Contraseña</label>
+                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+            </div>
+
+            <div class="input">
+                <label for="repetirContraseña">Repetir Contraseña</label>
+                <input placeholder="Repite tu contraseña" type="password" id="repetirContraseña">
+            </div>
+
+            <div class="input">
+                <button type="button" class="boton-login" id="btnRegistrar">
+                    Registrarse
+                </button>
+            </div>
+
+            <p style="text-align:center; color: var(--blanco); margin-top: 20px;">
+                ¿Ya tienes cuenta? 
+                <a href="Login.html" style="color: var(--blanco); text-decoration: underline;">Inicia sesión</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+        import { getFirestore, setDoc, doc, serverTimestamp } 
+            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBSpS6l1NLfeG0mGPADlBWT7cM4zr8eJqo",
+            authDomain: "novacore-a1ced.firebaseapp.com",
+            projectId: "novacore-a1ced",
+            storageBucket: "novacore-a1ced.firebasestorage.app",
+            messagingSenderId: "592320213272",
+            appId: "1:592320213272:web:692d7299a95c7554422e6d"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        document.getElementById("btnRegistrar").addEventListener("click", async () => {
+            const correo = document.getElementById("correo").value.trim();
+            const contraseña = document.getElementById("contraseña").value.trim();
+            const repetir = document.getElementById("repetirContraseña").value.trim();
+
+            if (!correo || !contraseña || !repetir) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
+
+            if (contraseña !== repetir) {
+                alert("Las contraseñas no coinciden.");
+                return;
+            }
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, correo, contraseña);
+                const user = userCredential.user;
+
+                await setDoc(doc(db, "usuarios", user.uid), {
+                    correo: correo,
+                    creado: serverTimestamp()
+                });
+
+                alert("Registrado correctamente");
+                window.location.href = "login.html";
+
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
