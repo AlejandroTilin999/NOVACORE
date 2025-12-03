@@ -1,0 +1,102 @@
+/* --- Estilos existentes --- */
+body {
+    background-color: #ecf0f1 !important;
+  }
+  
+  .container {
+    background-color: #fff !important;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .btn_add {
+    width: 100%;
+    border: 1px solid #333 !important;
+    background-color: #333 !important;
+  }
+  
+  .btn_add:hover {
+    opacity: 0.8;
+  }
+  
+  .btn-success {
+    border: 1px solid #06c046 !important;
+    background-color: #06c046 !important;
+  }
+  
+  hr {
+    height: 0.1px !important;
+    color: #f0db4f !important;
+    width: 100% !important;
+    background-color: red;
+  }
+  
+  .bi-arrow-right-circle {
+    font-size: 30px;
+  }
+  
+  .titulo_modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #444;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  thead tr th {
+    text-align: start !important;
+  }
+  
+  tr td {
+    text-align: start !important;
+  }
+  
+  /* --- NUEVO CSS RESPONSIVO --- */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+      width: 100%;
+    }
+  
+    thead tr {
+      display: none; /* Oculta encabezado de tabla en móviles */
+    }
+  
+    tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #f1f1f1;
+    }
+  
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      width: 45%;
+      padding-left: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
